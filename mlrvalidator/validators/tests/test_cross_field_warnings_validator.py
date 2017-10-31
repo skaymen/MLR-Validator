@@ -9,7 +9,7 @@ class DrainageTestCase(TestCase):
 
     def test_equal_areas(self):
         self.assertFalse(self.validator.validate({'drainageArea': '1000', 'contributingDrainageArea': '1000'}, {}))
-        self.assertFalse(self.validator.validate({'drainageArea': '1000', 'contributingDrainageArea': '1000'}, {}))
+        self.assertFalse(self.validator.validate({'drainageArea': '0', 'contributingDrainageArea': '0'}, {}))
 
 
     def test_unequal_areas(self):
